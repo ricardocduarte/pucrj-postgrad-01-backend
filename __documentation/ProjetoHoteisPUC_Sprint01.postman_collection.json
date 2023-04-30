@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "cee0e7e9-451d-47ca-990c-adf8f35fa221",
+		"name": "ProjetoHoteisPUC_Sprint01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11663012"
+	},
+	"item": [
+		{
+			"name": "Obter Lista de hoteis cadastrados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/hotels",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"hotels"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obter os dados de um hotel cadastrado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/hotel/5",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"hotel",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remover um hotel",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/hotel/6",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"hotel",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar um novo hotel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"hotel_x1as\",\n    \"stars\" : 5,\n    \"price\" : 110.5,\n    \"city\" : \"nilópolis\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/hotel",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"hotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar os dados de um hotel",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"hotel_00xxx\",\n    \"stars\" : 5,\n    \"price\" : 110.5,\n    \"city\" : \"nova iguaçu\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/hotel/4",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"hotel",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
