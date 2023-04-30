@@ -1,4 +1,4 @@
-# Projeto de cadastro de hoteis para o sprint 01 da pós graduação em Engenharia de software
+# Projeto de cadastro de hotéis para o sprint 01 da pós graduação em Engenharia de software
 
 Este projeto destina-se ao curso de pós-graduação 2023 </br> 
 <p>Módulo Backend</p>
@@ -24,7 +24,14 @@ objetivo: Criar uma API que permita fazer as operações básicas de inserção,
 </ul>
 
 <h3>Métodos Suportados</h3>
-
+<ul>
+    <li><strong>POST /hotel</strong>: Adiciona um novo hotel</li>
+    <li><strong>GET /hotels</strong>: Obter a lista de todos os hotéis cadastrados</li>
+    <li><strong>GET /hotel{id}</strong>: Obter um hotel específico pelo id informado</li>
+    <li><strong>DELETE /hotel/{id}</strong>: Exclui o hotel pelo id informado</li>    
+    <li><strong>PUT /hotel/{id}</strong>: Aletra o hotel identificado pelo id, com as informações passadas no corpo da requisição</li>    
+</ul>
 
 <h3>Documentação</h3>
 <p>Na pasta __documentation encontra-se a coleção atualizada das rotas deste projeto, para utilizar, basta importar no Postman.</p>
+<p>Para acessar a documentação do swagger utilize o caminho <i>/api/docs</i> quando o programa estiver em execução</p>

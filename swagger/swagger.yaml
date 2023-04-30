@@ -1,0 +1,101 @@
+openapi: 3.0.0
+info:
+  title: MVP - Sprint 01 - Cadastro de Hotéis
+  version: 1.0.0
+servers:
+  - url: "http://127.0.0.1:5000"
+paths:
+  /hotels:
+    get:
+      tags:
+        - Hotels
+      summary: Obter Lista de hoteis cadastrados
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /hotel/{id}:
+    get:
+      tags:
+        - Hotels
+      summary: Obter os dados de um hotel cadastrado
+      parameters:
+        - name: id
+          in: path
+          description: Código do hotel cadastrado
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - Hotels
+      summary: Remover um hotel
+      parameters:
+        - name: id
+          in: path
+          description: Código do hotel cadastrado
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - Hotels
+      summary: Atualizar os dados de um hotel
+      parameters:
+        - name: id
+          in: path
+          description: Código do hotel cadastrado
+          required: true
+          schema:
+            type: integer
+            format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: hotel_00xxx
+                stars: 5
+                price: 110.5
+                city: nova iguaçu
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /hotel:
+    post:
+      tags:
+        - Hotels
+      summary: Criar um novo hotel
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: hotel_x1as
+                stars: 5
+                price: 110.5
+                city: nilópolis
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /hotel/4:
+    
